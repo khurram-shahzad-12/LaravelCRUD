@@ -11,7 +11,12 @@ class CustomerController extends Controller
     public function view(){
         $url = url('/customer/create');
         $title='Customer Registration';
-        $data=compact('url','title');
+        $customer=new Customer();
+        $customer->name='';
+        $customer->email='';
+        $customer->city='';
+        $customer->state='';
+        $data=compact('url','title','customer');
         return view('customer')->with($data);
     }
 
