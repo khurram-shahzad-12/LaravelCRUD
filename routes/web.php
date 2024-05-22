@@ -15,3 +15,5 @@ Route::get('/customer/view',[CustomerController::class,'viewcustomer']);
 Route::get('/customer/delete/{id}',[CustomerController::class,'deletecustomer']);
 Route::get('/customer/edit/{id}',[CustomerController::class, 'editcustomer']);
 Route::post('/customer/update/{id}',[CustomerController::class, 'updatecustomer']);
+
+Route::post('/upload',[CustomerController::class,'uploadimage']);

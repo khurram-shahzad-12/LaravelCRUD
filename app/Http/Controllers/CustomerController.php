@@ -87,4 +87,14 @@ class CustomerController extends Controller
         $customer->save();
         return redirect('/customer/view');
     }
+
+    // upload image controller 
+    public function uploadimage(Request $request){
+        // echo "<pre>";
+        // print_r($request->all());
+        // file name give 
+        $filename=time().'khurram.'.$request->file('image')->getClientOriginalExtension();
+        // $request->file('image')->store('uploads');
+        echo $request->file('image')->storeAs('uploads',$filename);
+    }
 }

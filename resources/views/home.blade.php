@@ -44,6 +44,24 @@
           </div>
         </div>
       </nav>
+
+      {{-- uploading image in laravel, image will be upload inside of app folder by default, when you are saving image, that time if you want ochange it's location you can create a different folder but inside app folder and then upload there in laravel; this is because we create a separte route with /route in web.php;
+       --}}
+
+       <div class="container mt-5">
+        <form method="POST" action="{{url('/upload')}}" enctype="multipart/form-data">
+          @csrf
+          <p class="h2 text-center">UPLOAD IMAGE IN LARAVEL</p>
+          <div class="mb-3">
+            <label for="formFile" class="form-label">upload image file inside of app/upload folder</label>
+            <input class="form-control" type="file" id="formFile" name="image">
+            
+          </div>
+          
+          
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+       </div>
     
 </body>
 </html>
