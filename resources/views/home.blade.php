@@ -45,7 +45,7 @@
         </div>
       </nav>
 
-      {{-- uploading image in laravel, image will be upload inside of app folder by default, when you are saving image, that time if you want ochange it's location you can create a different folder but inside app folder and then upload there in laravel; this is because we create a separte route with /route in web.php;
+      {{-- uploading image in laravel, image will be upload inside of storage/app/upload folder by default, when you are saving image, that time if you want ochange it's location you can create a different folder but inside app folder and then upload there in laravel; this is because we create a separte route with /route in web.php;
        --}}
 
        <div class="container mt-5">
